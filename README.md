@@ -1,6 +1,6 @@
 # Hi, I'm Dur E Haider 
 
-Final-year Computer Engineering student at NUST CEME, specializing in GPU architecture, hardware acceleration, and real-time systems optimization.
+Final-year Computer Engineering student at NUST CEME, working hardware acceleration, and real-time systems optimization.
 
 ##  Current Research
 
