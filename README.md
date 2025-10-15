@@ -1,8 +1,8 @@
-# Hi, I'm Dur E Haider 👋
+# Hi, I'm Dur E Haider 
 
 Final-year Computer Engineering student at NUST CEME, specializing in GPU architecture, hardware acceleration, and real-time systems optimization.
 
-## 🔬 Current Research
+##  Current Research
 
 I'm working on **GPU-accelerated medical imaging pipelines** for 3D reconstruction and segmentation. My research focuses on:
 
@@ -11,7 +11,7 @@ I'm working on **GPU-accelerated medical imaging pipelines** for 3D reconstructi
 - **Memory hierarchy optimization**: Coalesced memory patterns, shared-memory tiling, and stream-based compute/I/O overlap
 - **GPU–FPGA co-design**: Exploring hybrid architectures for real-time medical visualization pipelines
 
-## 💡 Technical Focus
+##  Technical Focus
 
 **GPU & Graphics:**
 - CUDA (kernel design, occupancy optimization, memory coalescing)
@@ -37,7 +37,7 @@ I'm working on **GPU-accelerated medical imaging pipelines** for 3D reconstructi
 - GitHub, VS Code, ModelSim
 - Wireshark (network validation)
 
-## 🎯 What I'm Exploring
+##  What I'm Exploring
 
 Making **high-performance 3D reconstruction** accessible through:
 - GPU resource management and runtime scheduling
@@ -47,7 +47,7 @@ Making **high-performance 3D reconstruction** accessible through:
 
 My final year project demonstrates stable medical visualization with optimized texel density distribution and ~4× runtime improvement through CUDA acceleration.
 
-## 🚀 Featured Projects
+##  Featured Projects
 
 ### Hardware Texel Density Balancer (Final Year Project)
 GPU-accelerated pipeline for lung tumor 3D reconstruction with adaptive texel density balancing in critical regions. Targets consistent perceptual quality under varying zoom/scale while respecting performance budgets.
@@ -67,13 +67,13 @@ Real-time Ethernet communication between PC and Nexys 3 FPGA. Implemented UDP ha
 **Tech Stack:** VHDL, Xilinx ISE, Wireshark  
 **Focus:** Low-latency exchange, MAC/PHY interface, FSM-based handshakes
 
-## 📚 Currently
+##  Currently
 
 - Completing undergraduate thesis on **GPU-accelerated medical visualization**
 - Preparing applications for **Fall 2026 Master's programs** in GPU systems, real-time graphics, and high-performance computing
 - Exploring GPU scheduling frameworks and resource management for multi-tasking environments
 
-## 📫 Connect
+##  Connect
 
 - **LinkedIn:** [linkedin.com/in/dur-haider-a5bb1826a](https://linkedin.com/in/dur-haider-a5bb1826a)
 - **Email:** durhaider2@gmail.com
