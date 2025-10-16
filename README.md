@@ -76,7 +76,7 @@ Real-time Ethernet communication between PC and Nexys 3 FPGA. Implemented UDP ha
 ##  Connect
 
 - **LinkedIn:** [linkedin.com/in/dur-haider-a5bb1826a](https://linkedin.com/in/dur-haider-a5bb1826a)
-- **Email:** durhaider2@gmail.com
+- **Email:** durhaider2@outlook.com
 - **Location:** Islamabad, Pakistan
 
 ---
