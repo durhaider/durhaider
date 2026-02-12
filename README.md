@@ -1,9 +1,9 @@
 
-Final-year Computer Engineering student at NUST CEME, working hardware acceleration, and real-time systems optimization.
+Final-year Computer Engineering student at NUST, working hardware acceleration, and real-time systems optimization.
 
 ##  Current Research
 
-I'm working on **GPU-accelerated medical imaging pipelines** for 3D reconstruction and segmentation. My research focuses on:
+Currently working on **GPU-accelerated medical imaging pipelines** for 3D reconstruction and segmentation. My research focuses on:
 
 - **CUDA kernel optimization**: Achieved ~4× speedup (30s → 7s) through kernel fusion and batched memory transfers
 - **Texel density balancing**: Stabilizing texture resolution in diagnostically critical regions (tumor boundaries)
@@ -80,4 +80,3 @@ Real-time Ethernet communication between PC and Nexys 3 FPGA. Implemented UDP ha
 
 ---
 
-*Interested in GPU architecture, real-time systems, FPGA co-design, and hardware-accelerated medical imaging.*
