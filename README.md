@@ -33,7 +33,7 @@ Currently working on **GPU-accelerated medical imaging pipelines** for 3D recons
 **Tools & Languages:**
 - C/C++, Python, MATLAB
 - Unity, Blender (asset pipeline)
-- GitHub, VS Code, ModelSim
+- GitHub, VS Code, ModelSim, Vivado, Xilinx
 - Wireshark (network validation)
 
 ##  What I'm Exploring
