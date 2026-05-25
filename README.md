@@ -1,82 +1,136 @@
+# Dur E Haider Hussain Fayyaz
 
-Final-year Computer Engineering student at NUST, working hardware acceleration, and real-time systems optimization.
+**Final-year Computer Engineering student at NUST**, specializing in FPGA-based digital systems, hardware acceleration, and real-time systems optimization. Strong proficiency in Verilog/VHDL design, FPGA implementation, and CUDA-accelerated compute pipelines.
 
-##  Current Research
+---
 
-Currently working on **GPU-accelerated medical imaging pipelines** for 3D reconstruction and segmentation. My research focuses on:
+## Current Work
 
-- **CUDA kernel optimization**: Achieved ~4× speedup (30s → 7s) through kernel fusion and batched memory transfers
-- **Texel density balancing**: Stabilizing texture resolution in diagnostically critical regions (tumor boundaries)
-- **Memory hierarchy optimization**: Coalesced memory patterns, shared-memory tiling, and stream-based compute/I/O overlap
-- **GPU–FPGA co-design**: Exploring hybrid architectures for real-time medical visualization pipelines
+Currently completing my **Final Year Project**: a GPU-accelerated medical imaging pipeline for 3D lung tumor reconstruction and segmentation. Every CUDA optimization, from kernel fusion to memory coalescing to stream-based overlap.
 
-##  Technical Focus
+- **CUDA kernel optimization:** Achieved **~8.7× speedup (52 min → 6 min)** through kernel fusion, batched memory transfers, and occupancy-driven block sizing
+- **Memory hierarchy optimization:** Coalesced access patterns, shared-memory tiling, and compute/I/O stream overlap
+- **Texel density balancing:** Stabilizing texture resolution on tumor boundaries for clinical reliability
+- **GPU–FPGA co-design direction:** Exploring hybrid architectures for real-time medical visualization
 
-**GPU & Graphics:**
-- CUDA (kernel design, occupancy optimization, memory coalescing)
-- OpenGL, VTK
-- Real-time rendering and visualization
-- Performance profiling (timers, occupancy analysis)
+---
 
-**Hardware Design:**
-- Verilog/VHDL (Vivado, Xilinx ISE)
-- FPGA implementation (Spartan-6)
-- Pipeline design and hazard mitigation
-- Design verification and testbench development
+## Technical Focus
 
-**Medical Imaging:**
-- 3D reconstruction from volumetric data
-- Segmentation (lung tumor ROIs)
-- Surface mesh optimization
+### FPGA & Hardware Design (primary strength)
+
+- **Verilog/VHDL:** RTL design, parameterized modules, FSM-based controllers, generate statements
+- **FPGA implementation:** Spartan-6 (Nexys 3), Xilinx UltraScale+ (ZCU106/KCU105)
+- **Toolchain:** Vivado, Xilinx ISE 14.7, ModelSim
+- **Pipeline design:** Hazard detection and forwarding, branch flush control, timing closure
+- **Verification:** Custom testbenches, directed and pseudo-random stimulus, CDC debug, timing constraint analysis
+- **Protocols on FPGA:** UDP/Ethernet stack (MAC/PHY/UDP wrappers), PCIe transaction layer verification, UART/USART modules
+- **FPGA-specific optimization:** LUT/FF/BRAM resource trade-offs, clock domain crossing synchronization, clock divider generation
+
+### GPU & CUDA
+
+- CUDA kernel design and profiling (nvprof, occupancy analysis)
+- Memory coalescing, shared-memory tiling, stream-based pipeline overlap
+- Performance characterization and bottleneck-driven optimization
+- OpenGL, VTK for visualization pipelines
+
+### Medical Imaging
+
+- 3D reconstruction from volumetric CT data
+- Lung tumor segmentation and ROI extraction
+- Surface mesh optimization and texel density control
 - Clinical visualization workflows
 
-**Tools & Languages:**
+### Tools & Languages
+
 - C/C++, Python, MATLAB
-- Unity, Blender (asset pipeline)
-- GitHub, VS Code, ModelSim, Vivado, Xilinx
-- Wireshark (network validation)
+- Verilog, VHDL
+- Vivado, Xilinx ISE, ModelSim
+- Wireshark, GitHub, VS Code
 
-##  What I'm Exploring
+---
 
-Making **high-performance 3D reconstruction** accessible through:
-- GPU resource management and runtime scheduling
-- Real-time latency requirements for interactive visualization
-- Balancing throughput, latency, and resource utilization constraints
-- Hardware-software co-optimization (GPU–FPGA partitioning)
+## Featured Projects
 
-My final year project demonstrates stable medical visualization with optimized texel density distribution and ~4× runtime improvement through CUDA acceleration.
+### Hardware Texel Density Balancer
 
-##  Featured Projects
+GPU-accelerated pipeline for lung tumor 3D reconstruction with adaptive texel density balancing in diagnostically critical regions. Designed, implemented, and optimized end-to-end without collaboration. All CUDA knowledge entirely self-taught.
 
-### Hardware Texel Density Balancer (Final Year Project)
-GPU-accelerated pipeline for lung tumor 3D reconstruction with adaptive texel density balancing in critical regions. Targets consistent perceptual quality under varying zoom/scale while respecting performance budgets.
+**Tech stack:** CUDA, C/C++, VTK, Python
+**Outcome:** Runtime reduced from ~52 minutes to ~6 minutes (**8.7× speedup**); uniform texel density maintained on malignant boundaries under varying zoom and scale
 
-**Tech Stack:** CUDA, C/C++, VTK, Blender  
-**Outcome:** Runtime reduced from ~30s to ~7s; uniform texel density on malignant boundaries
+**What drove the speedup:**
+- Profiled sequential CPU pipeline to identify bottlenecks before writing any CUDA
+- Batched all CT slice transfers into single GPU transfers, eliminating per-slice PCIe overhead
+- Fused segmentation and reconstruction kernels, removing repeated kernel launch latency
+- Restructured memory access for coalescing, reducing memory transactions up to 32× per warp
+- Moved hot intermediate data from 600-cycle global memory into 4-cycle on-chip shared memory
+- Introduced CUDA streams to overlap active compute with next-batch data transfer
+
+---
 
 ### Pipelined MIPS Processor
-32-bit MIPS implementation in Verilog with full hazard handling (RAW/WAR), forwarding network, and branch flush control. Deployed on Nexys 3 (Spartan-6) with seven-segment ALU state display.
 
-**Tech Stack:** Verilog, Vivado/ISE, ModelSim  
-**Key Features:** Five-stage pipeline (IF/ID/EX/MEM/WB), timing closure optimization
+32-bit MIPS processor in Verilog with full hazard handling (RAW/WAR), forwarding network, and branch flush control. Deployed on Nexys 3 (Spartan-6) with seven-segment ALU state display for real-time hardware debugging.
 
-### FPGA-PC Communication (UDP Stack)
-Real-time Ethernet communication between PC and Nexys 3 FPGA. Implemented UDP handshake and transmission routines with Wireshark validation.
+**Tech stack:** Verilog, Vivado/ISE, ModelSim, Spartan-6
+**Key features:** Five-stage pipeline (IF/ID/EX/MEM/WB), timing closure, on-chip hardware validation
 
-**Tech Stack:** VHDL, Xilinx ISE, Wireshark  
-**Focus:** Low-latency exchange, MAC/PHY interface, FSM-based handshakes
+---
 
-##  Currently
+### FPGA Procedural Shader Pipeline (VGA)
 
-- Completing undergraduate thesis on **GPU-accelerated medical visualization**
-- Preparing applications for **Fall 2026 Master's programs** in GPU systems, real-time graphics, and high-performance computing
-- Exploring GPU scheduling frameworks and resource management for multi-tasking environments
+Real-time GPU-inspired procedural shader in Verilog generating animated planetary shading and starfields at 640×480@60Hz without a framebuffer. Implemented fixed-point nonlinear lighting and CORDIC-based trigonometric modulation under FPGA resource constraints.
 
-##  Connect
+**Tech stack:** Verilog, Xilinx ISE, Spartan-6
+**Key features:** CORDIC trig, fixed-point arithmetic, zero framebuffer architecture
+
+---
+
+### FPGA–PC Ethernet Communication (UDP Stack)
+
+Full UDP/IP/Ethernet stack implemented in VHDL on Nexys 3 (Spartan-6). Built IP-wrapper, UDP-wrapper, and Ethernet-wrapper-with-preamble modules. Verified end-to-end payload integrity using Wireshark.
+
+**Tech stack:** VHDL, Xilinx ISE, Wireshark
+**Focus:** Low-latency exchange, MAC/PHY interface, FSM-based handshakes, resource utilization documentation
+
+---
+
+### PCIe Communication Verification (NECOP Internship)
+
+Verified high-speed PCIe transaction layer behavior on Xilinx UltraScale+ using custom Verilog testbenches. Covered all four AXI lanes (RQ/RC/CQ/CC), DMA transfers, BAR access, reset sequencing, and CDC crossing analysis.
+
+**Tech stack:** Verilog, Vivado, UltraScale+
+**Focus:** Directed and pseudo-random stimulus, timing constraint collaboration, CDC debug
+
+---
+
+### Single and Multi-cycle MIPS Variants
+
+Datapath and FSM-based control unit variants of MIPS. Compared throughput vs critical-path trade-offs across implementations. Verified in ModelSim and deployed on FPGA.
+
+**Tech stack:** Verilog, ModelSim, Spartan-6
+
+---
+
+### Facial Recognition Lock (ESP32-CAM + OpenCV)
+
+Embedded authentication pipeline on ESP32-CAM streaming MJPEG frames to OpenCV for face recognition. GPIO-controlled relay actuated lock on authorization. Event logging to SPIFFS flash for audit trail.
+
+**Tech stack:** C++ (ESP32 Arduino), OpenCV, Python
+
+---
+
+### PC-to-PC IPv6 Communication
+
+Configured IPv6 topology in Cisco Packet Tracer, replicated on hardware. Verified packets, latencies, NDP behavior, and addressing using Wireshark.
+
+**Tech stack:** Cisco Packet Tracer, Wireshark
+
+---
+
+## Connect
 
 - **LinkedIn:** [linkedin.com/in/dur-haider-a5bb1826a](https://linkedin.com/in/dur-haider-a5bb1826a)
 - **Email:** durhaider2@outlook.com
 - **Location:** Islamabad, Pakistan
-
----
-
