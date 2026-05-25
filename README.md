@@ -132,5 +132,5 @@ Configured IPv6 topology in Cisco Packet Tracer, replicated on hardware. Verifie
 ## Connect
 
 - **LinkedIn:** [linkedin.com/in/dur-haider-a5bb1826a](https://linkedin.com/in/dur-haider-a5bb1826a)
-- **Email:** durhaider2@outlook.com
+- **Email:** durhaider2@gmail.com
 - **Location:** Islamabad, Pakistan
